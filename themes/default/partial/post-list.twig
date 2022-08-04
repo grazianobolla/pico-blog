@@ -1,0 +1,17 @@
+ {% for page in pages("blog")|sort_by("time")|reverse if not page.hidden %}
+    <div class="post">
+        <a href="{{ page.url }}">
+        {% if page.meta.thumbnail %}
+            <img src="{{page.meta.thumbnail}}" alt=""></img>
+        {% endif %}
+        </a>
+        <div class="post-content">
+            <p class="title"><a href="{{ page.url }}">{{ page.title }}</a></p>
+            <p class="description">{{ page.description }}</p>
+            <p class="extra-info">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                {{ page.date_formatted }}
+            </p>
+        </div>
+    </div>
+{% endfor %}

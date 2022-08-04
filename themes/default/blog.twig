@@ -1,0 +1,14 @@
+{% extends 'base.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ theme_url }}/css/blog.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block main %}
+    <div id="main" role="main">
+        <div class="container">
+            {% include 'partial/post-list.twig' %}
+        </div>
+    </div>
+{% endblock %}

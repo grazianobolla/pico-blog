@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ theme_url }}/css/post.css">
+    <link rel="stylesheet" href="{{ theme_url }}/css/cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block main %}
+    <div id="main" role="main">
+        <div class="container">
+            <div id="cv">
+                <div id="right">
+                    <img id="profile" src="{{meta.ProfilePic}}" style="height: auto">
+                    <h3>Profile</h3>
+                    {{meta.Profile|markdown}}
+                    <h3>Contact</h3>
+                    {{meta.Contact|markdown}}
+                    <h3>Languages</h3>
+                    {{meta.Languages|markdown}}
+                    <h3>Hobbies</h3>
+                    {{meta.Hobbies|markdown}}
+                </div>
+                <div id="left">
+                    <h1>{{meta.Name}} <a href="https://github.com/grazianobolla/"><i class="fa fa-github" aria-hidden="true" style="font-size: 32px"></i></a></h1>
+                    <h2 style="margin-top: -0.5em;">{{meta.Tag}}</h2>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

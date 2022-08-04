@@ -1,0 +1,4 @@
+site_title: Graziano Bolla
+rewrite_url: true
+date_format: %b %d, %Y
+theme: default

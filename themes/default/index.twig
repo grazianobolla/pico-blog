@@ -1,0 +1,13 @@
+{% extends 'base.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ theme_url }}/css/post.css">
+{% endblock %}
+
+{% block main %}
+    <div id="main" role="main">
+        <div class="container">
+            {{ content }}
+        </div>
+    </div>
+{% endblock %}
